@@ -35,3 +35,17 @@ greet("Bruce", "How do you do?")
 # Python Keyword Arguments
 
 # when we call a function with some values, these values get assigned to the arguments according to their position
+# Python allows functions to be called using keyword arguments. When we call functions in this way, the order of the arguments can be changed.
+# following the example above:
+
+# 2 keyword arguments
+greet(name = "Bruce",msg = "How do you do?")
+keyord arguments (out of order)
+greet(msg = "How do you do?",name = "Bruce") 
+
+# 1 positional, 1 keyword argument
+greet("Bruce", msg = "How do you do?")  
+
+# We can mix positional arguments with keyword arguments during a function call, but keep in mind keyword arguments must follow positional arguments. 
+# Having a positional argument after the keyword arguments will result in errors for example:
+# greet(name="Bruce", "How do you do?")
