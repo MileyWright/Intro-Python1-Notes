@@ -49,3 +49,11 @@ greet("Bruce", msg = "How do you do?")
 # We can mix positional arguments with keyword arguments during a function call, but keep in mind keyword arguments must follow positional arguments. 
 # Having a positional argument after the keyword arguments will result in errors for example:
 # greet(name="Bruce", "How do you do?")
+
+# **kwargs
+# If you dont know how many keyword arguments thuat will be passed into your function, add 2 asterisk `**`  before the parameter name.
+# The function will receive a dictionary of arguments and can access the items accordingly.
+def my_function(**me):
+  print("My last name is " + me["lname"])
+
+my_function(fname = "Miley", lname = "Wright")
