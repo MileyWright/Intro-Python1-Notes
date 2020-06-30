@@ -40,7 +40,7 @@ greet("Bruce", "How do you do?")
 
 # 2 keyword arguments
 greet(name = "Bruce",msg = "How do you do?")
-keyord arguments (out of order)
+# keyword arguments (out of order)
 greet(msg = "How do you do?",name = "Bruce") 
 
 # 1 positional, 1 keyword argument
