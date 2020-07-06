@@ -1,0 +1,38 @@
+Object Oriented Programming
+    a way of writing computer programs to use “objects” to model data and behaviors.
+    - Model objects with classes
+        - attributes
+        - methods
+    - Programming paradigm
+    - Allows us to establish relationships b/w objects
+
+Classes
+    - [nouns] are used to model real-world objects
+    - Think of them as blueprints to make multiple instances of the same object
+    - They contain:
+        - Attributes [adjectives]
+        - Methods [verbs]
+
+Method
+    - One or more lines of code
+    - Defines a specific behavior or action
+    - may return a value
+
+Self
+    - Indicates class-level variable
+        - scope is entire class
+
+class Animal:
+    """A simple example class"""
+    def __init( name, hunger, diet):
+        # the constructor
+        self.name = name
+        self.hunger = hunger
+        self.diet = diet
+    
+    def eat(self, food):
+        # a method
+        if food > 0 and hunger < 25:
+            hunger += food
+
+

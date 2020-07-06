@@ -8,8 +8,8 @@ def myfunc():
 
 myfunc() #Output: 300
 
-# same rules apply for functions inside a function. `x` is not available outside the function, but it is available for any function inside the function.
-# The local variable can be accessed from a function within a function:
+# same rules apply for nested functions. `x` is not available outside the function, but it is available for any function inside the function.
+# The local variable can be accessed from nested functions:
 def myfunc():
     x = 300
     def myinnerfunc():
