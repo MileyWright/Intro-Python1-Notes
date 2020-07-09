@@ -63,3 +63,75 @@ Newberry=Geocache('Newberry Views',1.5,2,44,-121)
 # Print it--also make this print more nicely
 # print(geocache)
 print(str(Newberry))
+
+
+# Class Inheritance
+
+# Inheritance
+#   allows us to define hierarchical relationships
+#   avoid typing redundant code!
+#   Python supports multiple inheritance
+#   'is-a'
+#   parent / child
+#   more general `parent` class us created to define shared attributes & behaviors
+#   more specific `child` class is used for unique details
+
+class Animal:
+    # A simple example class
+    def __init__(name, hunger, diet):
+        self.name = name
+        self.hunger = hunger
+        self.diet = diet
+
+    def eat(self, food):
+        if food > 0 and hunger < 25:
+            hunger += food
+
+class Dog(Animal):
+    # An example subclass
+    def __init__(self, name, hunger, diet, breed, indoor):
+        super().__init__(name, hunger, diet)
+        self.breed = breed
+        self.isIndoor = indoor
+    def fetch(self, ballX, ballY):
+        move(ballX, ballY)
+
+
+# We can define hierarchical relationships b/w classes where children (sub classes) inherit attributes and methods from their parent (super class) 
+
+# Class Relationships: Association
+#   'has-a'
+#   there is a link b/w two classes
+#   Composition
+#       class A CANNOT exist class B
+#   Aggregation
+#       class A CAN exist independently of class B
+
+class Restaurant:
+    def __init__(self, name, staff, dinner_menu):
+        self.name = name
+        self.staff = Employees[]   #`has an`
+        self.dinner_menu = Menu()  # `has a`
+    
+    # class functions would be added here
+class Employees:
+    def __init__(self, name, wage):
+        self.name = name
+        self.wage = wage
+    def calc_pay(self, hours):
+        return self.wage * hours
+
+class Menu:
+    def __init__(self, name, dishes, drinks):
+        self.name = name
+        self.dishes = Food[]
+        self.drinks = Drink[]
+    def add_item(self, item):
+        ...
+
+class Food:
+    def __init__(self, is_vegetarian = False):
+        self.name = name
+        self.is_vegetarian = is_vegetarian
+
+# We can define association relationships b/w classes by creating attributes within class A that are instances of class B
